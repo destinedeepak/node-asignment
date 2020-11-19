@@ -1,0 +1,12 @@
+input[type="file"]{
+  visibility: hidden;
+}
+
+.image-preview{
+  height: 6rem;
+  margin: 1rem 0;
+}
+
+.image-preview{
+  height: 100;
+}

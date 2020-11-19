@@ -1,0 +1,59 @@
+<form [formGroup]="form" (submit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="fname">First Name:</label>
+    <input
+    class="form-control"
+    type="text"
+    formControlName="fname"
+    name="fname"
+    placeholder="First Name">
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input
+    class="form-control"
+    type="text"
+    formControlName="lname"
+    name="lname"
+    placeholder="Last Name">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input
+    class="form-control"
+    type="email"
+    formControlName="email"
+    name="email"
+    placeholder="name@example.com">
+  </div>
+
+  <div class="form-group">
+    <label for="phoneno">Phone No:</label>
+    <input
+    class="form-control"
+    type="number"
+    formControlName="phoneno"
+     name="phoneno"
+     placeholder="Phoneno">
+  </div>
+
+  <div>
+    <button type="button"
+    (click)="filePicker.click()"
+    class="btn-danger"
+    >Pick A Image</button>
+    <input type="file" #filePicker (change)="onImagePicked($event)">
+    <img [src]="imagePreview" alt="no image" class="image-preview" >
+  </div>
+
+<hr>
+
+
+
+  <button
+  class="btn btn-danger"
+  type="submit">Save</button>
+</form>
